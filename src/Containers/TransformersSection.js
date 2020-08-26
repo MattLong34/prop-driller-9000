@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import Transformer from '../Components/Transformer'
 
-class TransformersSection extends Component {
+function TransformersSection(props) {
 
-  render() {
+  const displayBot = props.bots.map(bot => {
+    return <Transformer bot={bot} />
+  })
+   
     return (
       <section className = "transformers-section">
-        {/* Transformers here */}
+        {displayBot}
       </section>
     );
-  }
 }
 
 export default TransformersSection;
